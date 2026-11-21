@@ -1,42 +1,48 @@
 #ifndef MAHASISWA_H_INCLUDED
 #define MAHASISWA_H_INCLUDED
-#include "kenggotaan.h"
+#include "keanggotaan.h"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-struct ------------
+struct infotypeMahasiswa
 {
-    ------------
+    string NIM;
+    string nama;
+    string prodi;
+    string angkatan;
 };
 
-typedef ------------ ------------;         // variabel alias untuk infor
-typedef  struct ------------ *------------;   // variabel alias untuk pointer
+// typedef infotypeMahasiswa ------------;         // variabel alias untuk infor
+typedef  struct  elmMahasiswa *addressMhs ;  // variabel alias untuk pointer
 
 // kerangka dari elemen list
-struct ------------
+struct elmMahasiswa
 {
-    ------------
+    infotypeMahasiswa info;
+    addressMhs next;
+    addressMhs prev;
 };
 
 // kerangka dari list
-struct ------------
+struct ListMahasiswa
 {
-    ------------
+    addressMhs first;
+    addressMhs last;
 };
 
 // pengecekan apakah list kosong
-------------;
+bool isEmpty(ListMahasiswa Lm);
 /* I.S. list LM terdefinisi
    F.S. true jika list kosong dan false jika tidak kosong */
 
-------------;
+void createListMahasiswa(ListMahasiswa &Lm);
 /* I.S. ~
    F.S. terbentuk list kosong */
 
 // manajemen memori
-------------;
+ad
 /* I.S. info mahasiswa x terdefinisi
    F.S. mengembalikan alamat elemen berisi x dengan prev/next NULL
         dan daftar KRS dalam keadaan kosong */

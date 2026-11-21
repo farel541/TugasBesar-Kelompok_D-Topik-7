@@ -6,24 +6,34 @@
 
 using namespace std;
 
-struct ------------
+struct tanggal{
+   int tanggal;
+   int bulan;
+   int tahun;
+};
+struct InfotypeKeanggotaan
 {
-    ------------
+   tanggal tanggalBergabung;
+   string jabatan;
+   string status;
 };
 
-typedef ------------ ------------;         // variabel alias untuk infor
-typedef  struct ------------ *------------;   // variabel alias untuk pointer
+//typedef ------------ ------------;         // variabel alias untuk infor
+typedef  struct elmKeanggotaan *addressKgtn  ;// variabel alias untuk pointer
 
 // kerangka dari elemen list
-struct ------------
+struct elmkeanggotaan
 {
-    ------------
+   InfotypeKeanggotaan info;
+   addressKgtn next;
+   addressKgtn prev; 
 };
 
 // kerangka dari list
 struct ListKeanggotaan
 {
-    ------------
+    addressKgtn first;
+   addressKgtn last;
 };
 
 // pengecekan apakah list kosong

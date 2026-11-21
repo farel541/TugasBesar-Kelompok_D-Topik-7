@@ -5,24 +5,29 @@
 
 using namespace std;
 
-struct ------------
+struct infotypeKomunitas
 {
-    ------------
+    string nama;
+    string kode;
+    string kategori;
 };
 
-typedef ------------ ------------;         // variabel alias untuk infor
-typedef  struct ------------ *------------;   // variabel alias untuk pointer
+//typedef ------------ ------------;         // variabel alias untuk infor
+typedef  struct elmKomunitas *addressKmts;   // variabel alias untuk pointer
 
 // kerangka dari elemen list
-struct ------------
+struct elmKomunitas 
 {
-    ------------
+    infotypeKomunitas info;
+    addressKmts next;
+    addressKmts prev;
 };
 
 // kerangka dari list
-struct ------------
+struct ListKmts
 {
-    ------------ ------------;
+    addressKmts first;
+    addressKmts last;
 };
 
 // pengecekan apakah list kosong
